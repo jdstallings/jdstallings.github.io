@@ -1,1 +1,0 @@
-# jdstallings.github.io
