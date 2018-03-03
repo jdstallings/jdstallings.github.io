@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Aic on Data InDeed</title>
+    <link>/tags/aic/</link>
+    <description>Recent content in Aic on Data InDeed</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 14 Jan 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/aic/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Linear Regression</title>
+      <link>/2017/01/14/linear-regression/</link>
+      <pubDate>Sat, 14 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/01/14/linear-regression/</guid>
+      <description>Linear regression is a very simple approach for supervised learning in order to find relationship between a single, continuous variable called dependent (or target) variable (i.e. numeric values, not categorical or groups) and one or more other variables (continuous or factor/groups) called independent variables. Thus, it can be used to predict a quantitative response. At least 5 cases per independent variable in the analysis is required. Many of the more sophisticated statistical learning approaches are in fact generalizations or extensions of linear regression.</description>
+    </item>
+    
+  </channel>
+</rss>

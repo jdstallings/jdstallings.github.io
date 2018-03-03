@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo on Data InDeed</title>
+    <link>/tags/hugo/</link>
+    <description>Recent content in Hugo on Data InDeed</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 12 May 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Switching to Blogdown &amp; Hugo</title>
+      <link>/2017/05/12/switching-to-blogdown-hugo/</link>
+      <pubDate>Fri, 12 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/05/12/switching-to-blogdown-hugo/</guid>
+      <description>I’ve decided to switch to Blogdown/Hugo. For those interested, I used the method presented by Robert Myles McDonnell. It was the simplest and most clear cut way to implement blogdown/Hugo on GitHub, which is quite different from Jekyll. Over the next few weeks, I plan to tweak all of the customization and make the complete migration! Until next time…</description>
+    </item>
+    
+  </channel>
+</rss>

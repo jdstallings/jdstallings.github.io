@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Data InDeed</title>
+    <link>/post/</link>
+    <description>Recent content in Posts on Data InDeed</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 03 Mar 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>#DailyR ggplot2 scatterplot</title>
+      <link>/2018/03/03/dailyr-ggplot2-scatterplot/</link>
+      <pubDate>Sat, 03 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/03/03/dailyr-ggplot2-scatterplot/</guid>
+      <description>Dear Friends, I’ve decided to start up a series of posts called ‘#DailyR.’ My goal is to provide some example code to perform common tasks using R. I also want to spend a few days a week on slightly more complicated tasks, and perhaps throw in a little python every once in a while. If you like the content, please like and share! Until next time!
+ library(ggplot2) # load package library(cowplot) theme_set(theme_cowplot()) # pre-set theme data(&amp;quot;iris&amp;quot;) # load data set options(scipen=999) # turns off scientific notation gg &amp;lt;- ggplot(iris, aes(x = Sepal.</description>
+    </item>
+    
+    <item>
+      <title>Likert Scale Analysis</title>
+      <link>/2017/12/03/likert-scale-analysis/</link>
+      <pubDate>Sun, 03 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/12/03/likert-scale-analysis/</guid>
+      <description>Recently, I worked with researchers at Deaconess Hospital and the University of Southern Indiana. I consulted on a project to analyze Likert data and discovered the long standing controversy on the topic, which was intriguing. Here, I share a little background on Likert data, considerations about the analysis, and basic R code to perform an analysis. In the future, I’ll make available a workflow for to analyze Likert data, and develop a RShiny app to analyze and visualize the results for a standard survey.</description>
+    </item>
+    
+    <item>
+      <title>RCDS AD</title>
+      <link>/2017/11/19/rcds-ad/</link>
+      <pubDate>Sun, 19 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/11/19/rcds-ad/</guid>
+      <description>More Modifications to the Website! Hello Friends! We made some final changes to the Hugo website, updated some of our pages, and added the new ad below. We look forward to adding workflows, applications, and datasets over the next few weeks! Until next time…
+  </description>
+    </item>
+    
+    <item>
+      <title>Switching to Blogdown &amp; Hugo</title>
+      <link>/2017/05/12/switching-to-blogdown-hugo/</link>
+      <pubDate>Fri, 12 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/05/12/switching-to-blogdown-hugo/</guid>
+      <description>I’ve decided to switch to Blogdown/Hugo. For those interested, I used the method presented by Robert Myles McDonnell. It was the simplest and most clear cut way to implement blogdown/Hugo on GitHub, which is quite different from Jekyll. Over the next few weeks, I plan to tweak all of the customization and make the complete migration! Until next time…</description>
+    </item>
+    
+    <item>
+      <title>Aroma Project</title>
+      <link>/2017/04/30/aroma-project/</link>
+      <pubDate>Sun, 30 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/04/30/aroma-project/</guid>
+      <description>Hello Friends, I’ve decided to post materials from our recent paper published at http://www.jopan.org/article/S1089-9472(16)30334-3/fulltext. This combination manuscript, code, and other materials comprise an ‘RMarkdown’ document (check the code oout), in which all elements of the project are in one central ‘.Rmd’ document. I actually did this project while in Afghanistan and Iraq last year. Having the text, bibliography, raw data, code, and everything integrated into one document provides an unprecedented way to track and manage the project, especially when you’re doing it in between war zones!</description>
+    </item>
+    
+    <item>
+      <title>Example FAERS Project Setup</title>
+      <link>/2017/04/03/example-faers-project-setup/</link>
+      <pubDate>Mon, 03 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/04/03/example-faers-project-setup/</guid>
+      <description>Downloading data and working with large data sets can be a challenge, especially when the data require aggregation. Overtime column names or file naming conventions may change, which lead to potential errors in the aggregation process. Other data sets involve so many files that it is impractical to forego automation.
+In the biomedical sciences, there are many publically available Databases, Resources &amp;amp; APIs at the U.S. National Library of Medicine and U.</description>
+    </item>
+    
+    <item>
+      <title>Probability Distribution</title>
+      <link>/2017/03/11/probability-distribution/</link>
+      <pubDate>Sat, 11 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/03/11/probability-distribution/</guid>
+      <description>Wow, more than a month passed since my last blog! I’ve been busy working on text mining and mapping free text to medical ontologies. The text mining utilizes heuristic and probabilistic approaches, so I decided to take a step back to review probability theory and distribution of probabilities. Below, I provide a list of discrete and continuous probability functions with links to R documentation, and look at few probability distributions (normal, geometric, and binomial).</description>
+    </item>
+    
+    <item>
+      <title>Linear Regression</title>
+      <link>/2017/01/14/linear-regression/</link>
+      <pubDate>Sat, 14 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/01/14/linear-regression/</guid>
+      <description>Linear regression is a very simple approach for supervised learning in order to find relationship between a single, continuous variable called dependent (or target) variable (i.e. numeric values, not categorical or groups) and one or more other variables (continuous or factor/groups) called independent variables. Thus, it can be used to predict a quantitative response. At least 5 cases per independent variable in the analysis is required. Many of the more sophisticated statistical learning approaches are in fact generalizations or extensions of linear regression.</description>
+    </item>
+    
+    <item>
+      <title>My Library</title>
+      <link>/2016/12/22/my-library/</link>
+      <pubDate>Thu, 22 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/2016/12/22/my-library/</guid>
+      <description>Here are the books I’ve acquired over the last two years. After dabbling from 2012 to 2013, I started buying books. Many of the ones toward the end of the list you may find hardly worth your time. The web design, Java, and other similar books were typically obtained because they were free or inexpensive and I needed some quick solutions. I plan to update this library, web content, and I’ll add key manuscripts as time goes by.</description>
+    </item>
+    
+    <item>
+      <title>The Data Table Package</title>
+      <link>/2016/12/17/the-data-table-package/</link>
+      <pubDate>Sat, 17 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/2016/12/17/the-data-table-package/</guid>
+      <description>First let’s look at the ‘data.frame’. The data.frame is the bread and butter of R. It is an intuitive way to organize data into rows and columns, and subsetting is very straight forward. Organization is critical to a data.frame. Data.frames require that each row and column are the same length, however, they may contain differing types of data. Thus, it is similar to both a matrix and a list.
+df[i,j], “Take df, subset rows using i and columns using j”</description>
+    </item>
+    
+    <item>
+      <title>My Adventures in Data Science</title>
+      <link>/2016/12/10/my-adventures-in-data-science/</link>
+      <pubDate>Sat, 10 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/2016/12/10/my-adventures-in-data-science/</guid>
+      <description>Welcome to my blog! My name is Jonathan. Since 2007, I’ve worked as a Biochemistry Officer in the Army. My graduate training was in cellular and molecular pathology, but I’ve conducted research in many areas to meet the Army mission. I mentored graduate medical education residents and fellows in basic and clinical research in the areas of trauma, maternal fetal medicine, reproductive biology, and general medicine. I’ve also served as a Program Director and a Deputy Commander at a military research lab.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Import on Data InDeed</title>
+    <link>/categories/import/</link>
+    <description>Recent content in Import on Data InDeed</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 17 Dec 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/import/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>The Data Table Package</title>
+      <link>/2016/12/17/the-data-table-package/</link>
+      <pubDate>Sat, 17 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/2016/12/17/the-data-table-package/</guid>
+      <description>First let’s look at the ‘data.frame’. The data.frame is the bread and butter of R. It is an intuitive way to organize data into rows and columns, and subsetting is very straight forward. Organization is critical to a data.frame. Data.frames require that each row and column are the same length, however, they may contain differing types of data. Thus, it is similar to both a matrix and a list.
+df[i,j], “Take df, subset rows using i and columns using j”</description>
+    </item>
+    
+  </channel>
+</rss>

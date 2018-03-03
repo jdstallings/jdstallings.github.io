@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Probability Distributions on Data InDeed</title>
+    <link>/categories/probability-distributions/</link>
+    <description>Recent content in Probability Distributions on Data InDeed</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 11 Mar 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/probability-distributions/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Probability Distribution</title>
+      <link>/2017/03/11/probability-distribution/</link>
+      <pubDate>Sat, 11 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/03/11/probability-distribution/</guid>
+      <description>Wow, more than a month passed since my last blog! I’ve been busy working on text mining and mapping free text to medical ontologies. The text mining utilizes heuristic and probabilistic approaches, so I decided to take a step back to review probability theory and distribution of probabilities. Below, I provide a list of discrete and continuous probability functions with links to R documentation, and look at few probability distributions (normal, geometric, and binomial).</description>
+    </item>
+    
+  </channel>
+</rss>

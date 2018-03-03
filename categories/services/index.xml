@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Services on Data InDeed</title>
+    <link>/categories/services/</link>
+    <description>Recent content in Services on Data InDeed</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 31 Oct 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/services/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Research</title>
+      <link>/service/research-consulting/</link>
+      <pubDate>Tue, 31 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/service/research-consulting/</guid>
+      <description>Research Strategy is a big part of the overall research plan. It describes the rationale for the research and the experiments used to accomplish each specific aim. It addresses Significance, Innovation, and Approach around each specific aim. Further it addresses Preliminary Studies, Progress Reports, or other sections related to Human Subjects, Vertebrate Animals, Select Agents, and others.
+Research Strategy address the big picture: Can your research move your field forward? Is the field important— will progress make a difference to human health?</description>
+    </item>
+    
+    <item>
+      <title>about</title>
+      <link>/about/</link>
+      <pubDate>Tue, 31 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/about/</guid>
+      <description>An Aspiring Data Scientist… I’m a Military research scientist interested in systems biology, systems toxicology, environmental health, military operational medicine, and clinical decision support. My computing interests include R, RStudio, ShinyApps, Text Mining, Data Mining, Machine Learning, Deep Learning, and Python. I’ve had more than 18 years of research experience, 11 years experience in military research, and I love learning new things. I’m most excited and passionate about data science and becoming the best data scientist possible.</description>
+    </item>
+    
+    <item>
+      <title>Data Science</title>
+      <link>/service/data-science/</link>
+      <pubDate>Mon, 30 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/service/data-science/</guid>
+      <description>We are passionate about data science and want to help your research or business! We can help with the following:
+ Selection of research design and data collection methods. Whether questionaires, surveys, observational, or data from documents and records, we can recommend and help with a research design and data collection method that affords you the best opportunity to address your research or business objectives.
+ Research data organization, secure storage, and sharing.</description>
+    </item>
+    
+    <item>
+      <title>Workflows</title>
+      <link>/service/r-workflows/</link>
+      <pubDate>Sun, 29 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/service/r-workflows/</guid>
+      <description>We leverage Reproducible Research, which…
+ ties specific instructions to data analysis and experimental data so that scholarship can be recreated, better understood and verified. Packages in R for this purpose can be split into groups for: literate programming, package reproducibility, code/data formatting tools, format convertors, and object caching. The primary way that R facilitates reproducible research is using a document that is a combination of content and data analysis code.</description>
+    </item>
+    
+    <item>
+      <title>Applications</title>
+      <link>/service/applications/</link>
+      <pubDate>Thu, 26 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/service/applications/</guid>
+      <description>Shiny is an open source R package that provides an elegant and powerful web framework for building web applications using R. Shiny helps you turn your analyses into interactive web applications without requiring HTML, CSS, or JavaScript knowledge. We are able to develop custom Shiny Apps for your business or research needs, and host them on RStudio Connect. RStudio Connect is a publishing platform for R users to share R programs with anyone, including plots, reports, dashboards, notebooks, documents, and interactive web applications.</description>
+    </item>
+    
+  </channel>
+</rss>

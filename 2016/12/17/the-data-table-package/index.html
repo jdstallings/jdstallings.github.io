@@ -1,0 +1,1273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="google-site-verification" content="jJxC4Er7z420wuGCy9NA_ulVs0MEfqQ9HdgCu9Zfado" />
+  <meta charset="utf-8">
+	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author"      content="Sergey Pozhilov (GetTemplate.com)">
+
+	<title>The Data Table Package</title>
+
+	<link rel="shortcut icon" href="/images/gt_favicon.png">
+
+	
+	<link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
+	
+	<link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700">
+	
+	<link rel="stylesheet" href="/css/styles.css">
+
+	
+
+    
+        <script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#property=5a67c0296f97ab00136db490&product=inline-share-buttons"></script>
+    
+
+</head>
+<body class="home">
+
+<header id="header">
+	<div id="head" class="parallax" parallax-speed="2">
+		<h1 id="logo" class="text-center">
+			<img class="img-circle" src="/images/guy.jpg" alt="">
+			<span class="title">Jonathan D. Stallings</span>
+			<span class="tagline">An Aspiring Data Scientist<br>
+				<a href="">jdstallings@DataInDeed.io</a>
+            </span>
+		</h1>
+	</div>
+
+    <nav class="navbar navbar-default navbar-sticky">
+    <div class="container-fluid">
+
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="true">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+        <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
+
+            <ul class="nav navbar-nav">
+                
+                <li>
+                    <a href="/">home</a>
+                </li>
+                
+                <li>
+                    <a href="/about/">about</a>
+                </li>
+                
+                <li>
+                    <a href="/post/">blog</a>
+                </li>
+                
+                
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+
+</header>
+
+
+<main id="main">
+
+	<div class="container">
+
+		<div class="row topspace">
+			<div class="col-sm-8 col-sm-offset-2">
+
+ 				<article class="post">
+					<header class="entry-header">
+ 						<div class="entry-meta">
+ 							<span class="posted-on"><time class="entry-date published" date="2016-12-17 00:00:00 &#43;0000 UTC">17 December 2016</time></span>
+ 						</div>
+ 						<h1 class="entry-title"><a href="/2016/12/17/the-data-table-package/" rel="bookmark">The Data Table Package</a></h1>
+					</header>
+					<div class="entry-content">
+						<p>First let’s look at the <em>‘data.frame’</em>. The <em>data.frame</em> is the bread and butter of R. It is an intuitive way to organize data into rows and columns, and subsetting is very straight forward. Organization is critical to a data.frame. <em>Data.frames</em> require that each row and column are the same length, however, they may contain differing types of data. Thus, it is similar to both a matrix and a list.</p>
+<p>df[i,j], “Take df, subset rows using i and columns using j”</p>
+<pre class="r"><code>knitr::opts_chunk$set(echo = TRUE)
+library(png); library(grid); library(servr); library(knitr); library(data.table); library(pander)</code></pre>
+<pre class="r"><code>data(&quot;iris&quot;) # Load the iris dataset to work with
+pander(iris[1:2,]) # Subset rows on the left of the comma within the the brackets. In this example, i = rows (1:2), j = all columns when blank. The result is row 1 and 2, and all 4 columns of the iris dataset. See below.</code></pre>
+<table style="width:93%;">
+<colgroup>
+<col width="20%" />
+<col width="19%" />
+<col width="20%" />
+<col width="19%" />
+<col width="12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Sepal.Length</th>
+<th align="center">Sepal.Width</th>
+<th align="center">Petal.Length</th>
+<th align="center">Petal.Width</th>
+<th align="center">Species</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">5.1</td>
+<td align="center">3.5</td>
+<td align="center">1.4</td>
+<td align="center">0.2</td>
+<td align="center">setosa</td>
+</tr>
+<tr class="even">
+<td align="center">4.9</td>
+<td align="center">3</td>
+<td align="center">1.4</td>
+<td align="center">0.2</td>
+<td align="center">setosa</td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code>pander(iris[1:2,c(2,4)]) # Subset columns right of the comma. Use the combine function &#39;c&#39; to create a numeric vector (all the same type of data within a vector).  In this case the numeric vector combines 2 and 4. The result shows columns 2 and 4 only. See below.</code></pre>
+<table style="width:39%;">
+<colgroup>
+<col width="19%" />
+<col width="19%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Sepal.Width</th>
+<th align="center">Petal.Width</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">3.5</td>
+<td align="center">0.2</td>
+</tr>
+<tr class="even">
+<td align="center">3</td>
+<td align="center">0.2</td>
+</tr>
+</tbody>
+</table>
+<p>Both logical operators (i.e., <em>and (&amp;)</em>, <em>or (|)</em>, and <em>not equal to (!=)</em>) and arithmetic operators (i.e., <em>addition (+)</em> and _multiplication (*)_) are used within the bracket to subset rows and columns.</p>
+<pre class="r"><code>pander(iris[iris$Sepal.Width &gt; 3.8,]) # Use logical expressions with bracket notation to subset. In this example, all records that are greater than or equal to a Sepal.Width of 3.8, are subsetted.  See the 6 records that met the conditions below.</code></pre>
+<table>
+<colgroup>
+<col width="11%" />
+<col width="19%" />
+<col width="18%" />
+<col width="19%" />
+<col width="18%" />
+<col width="11%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"> </th>
+<th align="center">Sepal.Length</th>
+<th align="center">Sepal.Width</th>
+<th align="center">Petal.Length</th>
+<th align="center">Petal.Width</th>
+<th align="center">Species</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><strong>6</strong></td>
+<td align="center">5.4</td>
+<td align="center">3.9</td>
+<td align="center">1.7</td>
+<td align="center">0.4</td>
+<td align="center">setosa</td>
+</tr>
+<tr class="even">
+<td align="center"><strong>15</strong></td>
+<td align="center">5.8</td>
+<td align="center">4</td>
+<td align="center">1.2</td>
+<td align="center">0.2</td>
+<td align="center">setosa</td>
+</tr>
+<tr class="odd">
+<td align="center"><strong>16</strong></td>
+<td align="center">5.7</td>
+<td align="center">4.4</td>
+<td align="center">1.5</td>
+<td align="center">0.4</td>
+<td align="center">setosa</td>
+</tr>
+<tr class="even">
+<td align="center"><strong>17</strong></td>
+<td align="center">5.4</td>
+<td align="center">3.9</td>
+<td align="center">1.3</td>
+<td align="center">0.4</td>
+<td align="center">setosa</td>
+</tr>
+<tr class="odd">
+<td align="center"><strong>33</strong></td>
+<td align="center">5.2</td>
+<td align="center">4.1</td>
+<td align="center">1.5</td>
+<td align="center">0.1</td>
+<td align="center">setosa</td>
+</tr>
+<tr class="even">
+<td align="center"><strong>34</strong></td>
+<td align="center">5.5</td>
+<td align="center">4.2</td>
+<td align="center">1.4</td>
+<td align="center">0.2</td>
+<td align="center">setosa</td>
+</tr>
+</tbody>
+</table>
+<p>Another example.</p>
+<pre class="r"><code>pander(iris[iris$Petal.Length &gt; 6 &amp; iris$Sepal.Length &lt; 7.3,]) # Use the &#39;$&#39; operator when subsetting with column names in the bracket.</code></pre>
+<table style="width:100%;">
+<colgroup>
+<col width="12%" />
+<col width="18%" />
+<col width="17%" />
+<col width="18%" />
+<col width="17%" />
+<col width="13%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"> </th>
+<th align="center">Sepal.Length</th>
+<th align="center">Sepal.Width</th>
+<th align="center">Petal.Length</th>
+<th align="center">Petal.Width</th>
+<th align="center">Species</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><strong>110</strong></td>
+<td align="center">7.2</td>
+<td align="center">3.6</td>
+<td align="center">6.1</td>
+<td align="center">2.5</td>
+<td align="center">virginica</td>
+</tr>
+</tbody>
+</table>
+<p>To aggregate data, you have to use tapply, aggregate, and/or table. For example, get the mean of Sepal.Length:</p>
+<pre class="r"><code>pander(tapply(iris$Sepal.Length, iris$Species, mean)) # Use &#39;tapply&#39; to find the mean Sepal.Length for each Species.  The &#39;tapply&#39; function follows the format: (X, INDEX, FUN), where X is an atomic object, typically a vector, INDEX is a list of one or more factors, each of same length as X, and FUN is the function to be applied.  Since the data are already in a data.frame, the lengths are equal. The results show the mean &#39;Sepal.Length&#39; for each &#39;Species&#39;.</code></pre>
+<table style="width:49%;">
+<colgroup>
+<col width="12%" />
+<col width="18%" />
+<col width="18%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">setosa</th>
+<th align="center">versicolor</th>
+<th align="center">virginica</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">5.006</td>
+<td align="center">5.936</td>
+<td align="center">6.588</td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code>pander(iris[1:5,]) # Examine the first 5 rows. Note there are three levels of &#39;Petal.Length&#39;, 1.3, 1.4, and 1.5.</code></pre>
+<table style="width:93%;">
+<colgroup>
+<col width="20%" />
+<col width="19%" />
+<col width="20%" />
+<col width="19%" />
+<col width="12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Sepal.Length</th>
+<th align="center">Sepal.Width</th>
+<th align="center">Petal.Length</th>
+<th align="center">Petal.Width</th>
+<th align="center">Species</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">5.1</td>
+<td align="center">3.5</td>
+<td align="center">1.4</td>
+<td align="center">0.2</td>
+<td align="center">setosa</td>
+</tr>
+<tr class="even">
+<td align="center">4.9</td>
+<td align="center">3</td>
+<td align="center">1.4</td>
+<td align="center">0.2</td>
+<td align="center">setosa</td>
+</tr>
+<tr class="odd">
+<td align="center">4.7</td>
+<td align="center">3.2</td>
+<td align="center">1.3</td>
+<td align="center">0.2</td>
+<td align="center">setosa</td>
+</tr>
+<tr class="even">
+<td align="center">4.6</td>
+<td align="center">3.1</td>
+<td align="center">1.5</td>
+<td align="center">0.2</td>
+<td align="center">setosa</td>
+</tr>
+<tr class="odd">
+<td align="center">5</td>
+<td align="center">3.6</td>
+<td align="center">1.4</td>
+<td align="center">0.2</td>
+<td align="center">setosa</td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code>pander(aggregate(Sepal.Length[1:5] ~ Species[1:5] + Petal.Length[1:5], data = iris, mean)) # Use aggregate to find the mean of &#39;Sepal.Length&#39; OF &#39;Species&#39; GROUPED BY &#39;Petal.Length&#39; (remeber, there are three levels). Highlight the &#39;aggregate&#39; function in your RStudio editor and then hit F1 to open up the reference material for this function.</code></pre>
+<table style="width:76%;">
+<colgroup>
+<col width="20%" />
+<col width="27%" />
+<col width="27%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Species[1:5]</th>
+<th align="center">Petal.Length[1:5]</th>
+<th align="center">Sepal.Length[1:5]</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">setosa</td>
+<td align="center">1.3</td>
+<td align="center">4.7</td>
+</tr>
+<tr class="even">
+<td align="center">setosa</td>
+<td align="center">1.4</td>
+<td align="center">5</td>
+</tr>
+<tr class="odd">
+<td align="center">setosa</td>
+<td align="center">1.5</td>
+<td align="center">4.6</td>
+</tr>
+</tbody>
+</table>
+<p>Thus, for plants grouped by Petal.Lengths (1.3, 1.4. and 1.5), the calculated means (of Species within these groups, only “setosa” in this case) are equal to 4.7, 5.0, and 1.5. Note that the data is sorted on the GROUP BY in ascending order.</p>
+<div id="formulas-one-one-one-many-many-one-and-many-many" class="section level4">
+<h4>Formulas, one ~ one, one ~ many, many ~ one, and many ~ many:</h4>
+<ul>
+<li>aggregate(weight ~ feed, data = chickwts, mean)<br />
+</li>
+<li>aggregate(breaks ~ wool + tension, data = warpbreaks, mean)<br />
+</li>
+<li>aggregate(cbind(Ozone, Temp) ~ Month, data = airquality, mean)<br />
+</li>
+<li>aggregate(cbind(ncases, ncontrols) ~ alcgp + tobgp, data = esoph, sum)</li>
+</ul>
+</div>
+<div id="dot-notation" class="section level4">
+<h4>Dot notation:</h4>
+<ul>
+<li>aggregate(. ~ Species, data = iris, mean)<br />
+</li>
+<li>aggregate(len ~ ., data = ToothGrowth, mean)</li>
+</ul>
+</div>
+<div id="often-followed-by-xtabs" class="section level4">
+<h4>Often followed by xtabs():</h4>
+<ul>
+<li>ag &lt;- aggregate(len ~ ., data = ToothGrowth, mean)<br />
+</li>
+<li>xtabs(len ~ ., data = ag)</li>
+</ul>
+<p>See example of our data below, with a few modifications for the illustration (i.e. column names)</p>
+<pre class="r"><code>data = aggregate(Sepal.Length[1:5] ~ Species[1:5] + Petal.Length[1:5], data = iris, mean)
+colnames(data) &lt;- c(&quot;Species&quot;, &quot;Sepal&quot;, &quot;Petal&quot;)
+pander(xtabs(Sepal ~ ., data = data))</code></pre>
+<table style="width:49%;">
+<colgroup>
+<col width="23%" />
+<col width="8%" />
+<col width="8%" />
+<col width="8%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"> </th>
+<th align="center">4.6</th>
+<th align="center">4.7</th>
+<th align="center">5</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><strong>setosa</strong></td>
+<td align="center">1.5</td>
+<td align="center">1.3</td>
+<td align="center">1.4</td>
+</tr>
+<tr class="even">
+<td align="center"><strong>versicolor</strong></td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="center"><strong>virginica</strong></td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code>pander(table(Petal = iris$Petal.Length[1:5], Sepal = iris$Sepal.Length[1:5])) # The table function creates a matix to see how the 5 rows are goruped into the 3 Petal.Length.</code></pre>
+<table style="width:51%;">
+<colgroup>
+<col width="13%" />
+<col width="8%" />
+<col width="8%" />
+<col width="8%" />
+<col width="5%" />
+<col width="6%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"> </th>
+<th align="center">4.6</th>
+<th align="center">4.7</th>
+<th align="center">4.9</th>
+<th align="center">5</th>
+<th align="center">5.1</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><strong>1.3</strong></td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="center"><strong>1.4</strong></td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+</tr>
+<tr class="odd">
+<td align="center"><strong>1.5</strong></td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="the-data.table" class="section level2">
+<h2>The Data.Table</h2>
+<p>So, just when you think you’ve mastered the data.frame, you find out about the data.table package. Using the iris data, I’ll work through the main sections found in the data.table cheat sheet, which can be found <a href="http://blog.datacamp.com/data-table-cheat-sheet/">here</a>, which first appeared on <a href="http://blog.datacamp.com/">DataCamp Blog</a>.</p>
+<p>dt[i,j,by], “Take dt, subset rows using i, then calculate j grouped by by”</p>
+<div id="subsetting-rows-using-i" class="section level3">
+<h3>Subsetting Rows Using i</h3>
+<pre class="r"><code>dt &lt;- data.table(iris)
+pander(dt[3:5, ]) # or dt[3:5], Subset rows by number, similar to data.frame. </code></pre>
+<table style="width:93%;">
+<colgroup>
+<col width="20%" />
+<col width="19%" />
+<col width="20%" />
+<col width="19%" />
+<col width="12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Sepal.Length</th>
+<th align="center">Sepal.Width</th>
+<th align="center">Petal.Length</th>
+<th align="center">Petal.Width</th>
+<th align="center">Species</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">4.7</td>
+<td align="center">3.2</td>
+<td align="center">1.3</td>
+<td align="center">0.2</td>
+<td align="center">setosa</td>
+</tr>
+<tr class="even">
+<td align="center">4.6</td>
+<td align="center">3.1</td>
+<td align="center">1.5</td>
+<td align="center">0.2</td>
+<td align="center">setosa</td>
+</tr>
+<tr class="odd">
+<td align="center">5</td>
+<td align="center">3.6</td>
+<td align="center">1.4</td>
+<td align="center">0.2</td>
+<td align="center">setosa</td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code>pander(dt[Species == &quot;setosa&quot;,][1:5]) # Subset on column names to select rows that satisfy the condition. dt[Species == &quot;setosa&quot;]. The [1:5] shows the first 5 rows, without this the whole data set is displayed (a feature not available with a data.frame)</code></pre>
+<table style="width:93%;">
+<colgroup>
+<col width="20%" />
+<col width="19%" />
+<col width="20%" />
+<col width="19%" />
+<col width="12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Sepal.Length</th>
+<th align="center">Sepal.Width</th>
+<th align="center">Petal.Length</th>
+<th align="center">Petal.Width</th>
+<th align="center">Species</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">5.1</td>
+<td align="center">3.5</td>
+<td align="center">1.4</td>
+<td align="center">0.2</td>
+<td align="center">setosa</td>
+</tr>
+<tr class="even">
+<td align="center">4.9</td>
+<td align="center">3</td>
+<td align="center">1.4</td>
+<td align="center">0.2</td>
+<td align="center">setosa</td>
+</tr>
+<tr class="odd">
+<td align="center">4.7</td>
+<td align="center">3.2</td>
+<td align="center">1.3</td>
+<td align="center">0.2</td>
+<td align="center">setosa</td>
+</tr>
+<tr class="even">
+<td align="center">4.6</td>
+<td align="center">3.1</td>
+<td align="center">1.5</td>
+<td align="center">0.2</td>
+<td align="center">setosa</td>
+</tr>
+<tr class="odd">
+<td align="center">5</td>
+<td align="center">3.6</td>
+<td align="center">1.4</td>
+<td align="center">0.2</td>
+<td align="center">setosa</td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code>pander(dt[Species %in% c(&quot;setosa&quot;, &quot;versicolor&quot;)][48:52]) # Select on multiple values in a column.</code></pre>
+<table>
+<colgroup>
+<col width="20%" />
+<col width="19%" />
+<col width="20%" />
+<col width="19%" />
+<col width="19%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Sepal.Length</th>
+<th align="center">Sepal.Width</th>
+<th align="center">Petal.Length</th>
+<th align="center">Petal.Width</th>
+<th align="center">Species</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">4.6</td>
+<td align="center">3.2</td>
+<td align="center">1.4</td>
+<td align="center">0.2</td>
+<td align="center">setosa</td>
+</tr>
+<tr class="even">
+<td align="center">5.3</td>
+<td align="center">3.7</td>
+<td align="center">1.5</td>
+<td align="center">0.2</td>
+<td align="center">setosa</td>
+</tr>
+<tr class="odd">
+<td align="center">5</td>
+<td align="center">3.3</td>
+<td align="center">1.4</td>
+<td align="center">0.2</td>
+<td align="center">setosa</td>
+</tr>
+<tr class="even">
+<td align="center">7</td>
+<td align="center">3.2</td>
+<td align="center">4.7</td>
+<td align="center">1.4</td>
+<td align="center">versicolor</td>
+</tr>
+<tr class="odd">
+<td align="center">6.4</td>
+<td align="center">3.2</td>
+<td align="center">4.5</td>
+<td align="center">1.5</td>
+<td align="center">versicolor</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="manipulate-on-columns-in-j" class="section level3">
+<h3>Manipulate on Columns in j</h3>
+<pre class="r"><code># dt[,Species] returns a vector [1] &quot;sestosa&quot;.....&quot;versicolor&quot;, etc..
+pander(dt[,.(Species, Sepal.Length)][48:52]) # Subset multiple columns with dot notation, which are returned as a data.table.  This is a very nice way to reduce the dimension of data you&#39;re interested in and work with smaller tables. Note that the .() is an alias of a list. If it is not used, the results returned are a vector.</code></pre>
+<table style="width:38%;">
+<colgroup>
+<col width="18%" />
+<col width="19%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Species</th>
+<th align="center">Sepal.Length</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">setosa</td>
+<td align="center">4.6</td>
+</tr>
+<tr class="even">
+<td align="center">setosa</td>
+<td align="center">5.3</td>
+</tr>
+<tr class="odd">
+<td align="center">setosa</td>
+<td align="center">5</td>
+</tr>
+<tr class="even">
+<td align="center">versicolor</td>
+<td align="center">7</td>
+</tr>
+<tr class="odd">
+<td align="center">versicolor</td>
+<td align="center">6.4</td>
+</tr>
+</tbody>
+</table>
+<p>Call functions in j.</p>
+<pre class="r"><code>dt[,length(Sepal.Length)]; dt[,sum(Sepal.Length)]; dt[,mean(Sepal.Length)]; dt[,sd(Sepal.Length)]</code></pre>
+<p>[1] 150 [1] 876.5 [1] 5.843333 [1] 0.8280661</p>
+<p>How about all of these functions in one formula.</p>
+<pre class="r"><code>data &lt;- dt[,c(length(Sepal.Length), sum(Sepal.Length), mean(Sepal.Length), sd(Sepal.Length))] # use the combine functions to perform multiple functions on the same column
+names(data) &lt;- c(&quot;Length&quot;, &quot;Sum&quot;, &quot;Mean&quot;, &quot;Standard Deviation&quot;) # create a list of names
+pander(data) # Return the vector of results with names for a report. Easy, and saves coding and lots of time.</code></pre>
+<table style="width:62%;">
+<colgroup>
+<col width="12%" />
+<col width="11%" />
+<col width="11%" />
+<col width="27%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Length</th>
+<th align="center">Sum</th>
+<th align="center">Mean</th>
+<th align="center">Standard Deviation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">150</td>
+<td align="center">876.5</td>
+<td align="center">5.843</td>
+<td align="center">0.8281</td>
+</tr>
+</tbody>
+</table>
+<p>If the column lengths are different, the 2nd column will get recycled. Multiple expression can also be wrapped into {} brackets in the j position. Such as {print(Species) plot(Sepal.Length) NULL}</p>
+<pre class="r"><code># dt[, {print(Species[1:5]) 
+#       plot(Sepal.Length) 
+#       NULL}] # Use bracket notation similar to data.frame; the return carriage must be used to perform each wrapped function.
+
+pander(dt[,.(print(Species[1:5]), plot(Sepal.Length), NULL)]) # Or use the dot notiation and commas to avoid the return carriage.  What ever you prefer. </code></pre>
+<p><img src="/post/2016-12-17-the-data-table-package_files/figure-html/unnamed-chunk-16-1.png" width="576" style="display: block; margin: auto;" />[1] setosa setosa setosa setosa setosa Levels: setosa versicolor virginica</p>
+<table style="width:11%;">
+<colgroup>
+<col width="11%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">V1</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">setosa</td>
+</tr>
+<tr class="even">
+<td align="center">setosa</td>
+</tr>
+<tr class="odd">
+<td align="center">setosa</td>
+</tr>
+<tr class="even">
+<td align="center">setosa</td>
+</tr>
+<tr class="odd">
+<td align="center">setosa</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="doing-j-by-group" class="section level3">
+<h3>Doing j BY Group</h3>
+<pre class="r"><code>data &lt;- dt[ ,.(Results = c(length(Sepal.Length), sum(Sepal.Length), mean(Sepal.Length), sd(Sepal.Length))), by = &quot;Species&quot;] # use the dot notation to provide labels to the column.
+data$Category &lt;- rep(c(&quot;Length&quot;, &quot;Sum&quot;, &quot;Mean&quot;, &quot;Standard Deviation&quot;), length(levels(data$Species))) # create a list of names that are then applied to a column. Save time by using the length of the number of levels found from the by-selector.
+pander(data) # Returns a data.table of results for a report. Easy, and saves time.</code></pre>
+<table style="width:60%;">
+<colgroup>
+<col width="18%" />
+<col width="13%" />
+<col width="27%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Species</th>
+<th align="center">Results</th>
+<th align="center">Category</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">setosa</td>
+<td align="center">50</td>
+<td align="center">Length</td>
+</tr>
+<tr class="even">
+<td align="center">setosa</td>
+<td align="center">250.3</td>
+<td align="center">Sum</td>
+</tr>
+<tr class="odd">
+<td align="center">setosa</td>
+<td align="center">5.006</td>
+<td align="center">Mean</td>
+</tr>
+<tr class="even">
+<td align="center">setosa</td>
+<td align="center">0.3525</td>
+<td align="center">Standard Deviation</td>
+</tr>
+<tr class="odd">
+<td align="center">versicolor</td>
+<td align="center">50</td>
+<td align="center">Length</td>
+</tr>
+<tr class="even">
+<td align="center">versicolor</td>
+<td align="center">296.8</td>
+<td align="center">Sum</td>
+</tr>
+<tr class="odd">
+<td align="center">versicolor</td>
+<td align="center">5.936</td>
+<td align="center">Mean</td>
+</tr>
+<tr class="even">
+<td align="center">versicolor</td>
+<td align="center">0.5162</td>
+<td align="center">Standard Deviation</td>
+</tr>
+<tr class="odd">
+<td align="center">virginica</td>
+<td align="center">50</td>
+<td align="center">Length</td>
+</tr>
+<tr class="even">
+<td align="center">virginica</td>
+<td align="center">329.4</td>
+<td align="center">Sum</td>
+</tr>
+<tr class="odd">
+<td align="center">virginica</td>
+<td align="center">6.588</td>
+<td align="center">Mean</td>
+</tr>
+<tr class="even">
+<td align="center">virginica</td>
+<td align="center">0.6359</td>
+<td align="center">Standard Deviation</td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code>pander(dt[,.(&quot;Mean&quot; = mean(Sepal.Length)), by=.(&quot;Species&quot; = Species, &quot;Petal Length&quot; = Petal.Length)][1:5]) # Group by several factors using the dot nottion .(X, Y). </code></pre>
+<table style="width:44%;">
+<colgroup>
+<col width="13%" />
+<col width="20%" />
+<col width="9%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Species</th>
+<th align="center">Petal Length</th>
+<th align="center">Mean</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">setosa</td>
+<td align="center">1.4</td>
+<td align="center">4.915</td>
+</tr>
+<tr class="even">
+<td align="center">setosa</td>
+<td align="center">1.3</td>
+<td align="center">4.843</td>
+</tr>
+<tr class="odd">
+<td align="center">setosa</td>
+<td align="center">1.5</td>
+<td align="center">5.146</td>
+</tr>
+<tr class="even">
+<td align="center">setosa</td>
+<td align="center">1.7</td>
+<td align="center">5.4</td>
+</tr>
+<tr class="odd">
+<td align="center">setosa</td>
+<td align="center">1.6</td>
+<td align="center">4.914</td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code>pander(dt[,.N,by = .(Species, Petal.Length)][1:5]) # Count the sum by multiple columns. This is a great feature!!  By the way, you can perform functions within the dot notation in the by bracket notation also.</code></pre>
+<table style="width:40%;">
+<colgroup>
+<col width="13%" />
+<col width="20%" />
+<col width="5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Species</th>
+<th align="center">Petal.Length</th>
+<th align="center">N</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">setosa</td>
+<td align="center">1.4</td>
+<td align="center">13</td>
+</tr>
+<tr class="even">
+<td align="center">setosa</td>
+<td align="center">1.3</td>
+<td align="center">7</td>
+</tr>
+<tr class="odd">
+<td align="center">setosa</td>
+<td align="center">1.5</td>
+<td align="center">13</td>
+</tr>
+<tr class="even">
+<td align="center">setosa</td>
+<td align="center">1.7</td>
+<td align="center">4</td>
+</tr>
+<tr class="odd">
+<td align="center">setosa</td>
+<td align="center">1.6</td>
+<td align="center">7</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="addingupdating-columns-by-referencing-in-j-using" class="section level3">
+<h3>Adding/Updating Columns By Referencing in j Using :=</h3>
+<pre class="r"><code>test &lt;- iris[1:5,] 
+pander(test) # let&#39;s create a subset to work with first</code></pre>
+<table style="width:93%;">
+<colgroup>
+<col width="20%" />
+<col width="19%" />
+<col width="20%" />
+<col width="19%" />
+<col width="12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Sepal.Length</th>
+<th align="center">Sepal.Width</th>
+<th align="center">Petal.Length</th>
+<th align="center">Petal.Width</th>
+<th align="center">Species</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">5.1</td>
+<td align="center">3.5</td>
+<td align="center">1.4</td>
+<td align="center">0.2</td>
+<td align="center">setosa</td>
+</tr>
+<tr class="even">
+<td align="center">4.9</td>
+<td align="center">3</td>
+<td align="center">1.4</td>
+<td align="center">0.2</td>
+<td align="center">setosa</td>
+</tr>
+<tr class="odd">
+<td align="center">4.7</td>
+<td align="center">3.2</td>
+<td align="center">1.3</td>
+<td align="center">0.2</td>
+<td align="center">setosa</td>
+</tr>
+<tr class="even">
+<td align="center">4.6</td>
+<td align="center">3.1</td>
+<td align="center">1.5</td>
+<td align="center">0.2</td>
+<td align="center">setosa</td>
+</tr>
+<tr class="odd">
+<td align="center">5</td>
+<td align="center">3.6</td>
+<td align="center">1.4</td>
+<td align="center">0.2</td>
+<td align="center">setosa</td>
+</tr>
+</tbody>
+</table>
+<p>use the := to update a value in a column</p>
+<pre class="r"><code># test$Sepal.Length  ......  [1] 5.1 4.9 4.7 4.6 5.0
+test &lt;- data.table(test)
+pander(test[, Sepal.Length := exp(Sepal.Length)]) # use the combine function to update multple columns at the same time.</code></pre>
+<table style="width:93%;">
+<colgroup>
+<col width="20%" />
+<col width="19%" />
+<col width="20%" />
+<col width="19%" />
+<col width="12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Sepal.Length</th>
+<th align="center">Sepal.Width</th>
+<th align="center">Petal.Length</th>
+<th align="center">Petal.Width</th>
+<th align="center">Species</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">164</td>
+<td align="center">3.5</td>
+<td align="center">1.4</td>
+<td align="center">0.2</td>
+<td align="center">setosa</td>
+</tr>
+<tr class="even">
+<td align="center">134.3</td>
+<td align="center">3</td>
+<td align="center">1.4</td>
+<td align="center">0.2</td>
+<td align="center">setosa</td>
+</tr>
+<tr class="odd">
+<td align="center">109.9</td>
+<td align="center">3.2</td>
+<td align="center">1.3</td>
+<td align="center">0.2</td>
+<td align="center">setosa</td>
+</tr>
+<tr class="even">
+<td align="center">99.48</td>
+<td align="center">3.1</td>
+<td align="center">1.5</td>
+<td align="center">0.2</td>
+<td align="center">setosa</td>
+</tr>
+<tr class="odd">
+<td align="center">148.4</td>
+<td align="center">3.6</td>
+<td align="center">1.4</td>
+<td align="center">0.2</td>
+<td align="center">setosa</td>
+</tr>
+</tbody>
+</table>
+<p>using functional :=</p>
+<pre class="r"><code>pander(test[, &#39;:=&#39; (test = 
+        exp(Sepal.Length)),
+        by = Petal.Length][])</code></pre>
+<table style="width:100%;">
+<colgroup>
+<col width="18%" />
+<col width="17%" />
+<col width="18%" />
+<col width="17%" />
+<col width="12%" />
+<col width="13%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Sepal.Length</th>
+<th align="center">Sepal.Width</th>
+<th align="center">Petal.Length</th>
+<th align="center">Petal.Width</th>
+<th align="center">Species</th>
+<th align="center">test</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">164</td>
+<td align="center">3.5</td>
+<td align="center">1.4</td>
+<td align="center">0.2</td>
+<td align="center">setosa</td>
+<td align="center">1.713e+71</td>
+</tr>
+<tr class="even">
+<td align="center">134.3</td>
+<td align="center">3</td>
+<td align="center">1.4</td>
+<td align="center">0.2</td>
+<td align="center">setosa</td>
+<td align="center">2.096e+58</td>
+</tr>
+<tr class="odd">
+<td align="center">109.9</td>
+<td align="center">3.2</td>
+<td align="center">1.3</td>
+<td align="center">0.2</td>
+<td align="center">setosa</td>
+<td align="center">5.616e+47</td>
+</tr>
+<tr class="even">
+<td align="center">99.48</td>
+<td align="center">3.1</td>
+<td align="center">1.5</td>
+<td align="center">0.2</td>
+<td align="center">setosa</td>
+<td align="center">1.605e+43</td>
+</tr>
+<tr class="odd">
+<td align="center">148.4</td>
+<td align="center">3.6</td>
+<td align="center">1.4</td>
+<td align="center">0.2</td>
+<td align="center">setosa</td>
+<td align="center">2.851e+64</td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code># test[,X := NULL] # removes a column instanly
+# test[,c(X, Y) := NULL] # removes two columns
+# Cols.chosen = c(&quot;Species&quot;, &quot;Sepal.Width&quot;) # define columns
+# test[, (Cols.chosen) := NULL] # removes columns based on the names in the vector</code></pre>
+<p>Finally, there are many advanced features, indexing and key functions that enhance data.table operations. Several websites and blogs have shown that data.table operations much more efficient than data.frames. Although it will take some time to master the data.table, it will save you tons of time in the future, computationally and writing code. Until next time…</p>
+</div>
+</div>
+
+					</div>
+				</article>
+
+			</div>
+		</div> 
+
+        <div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
+
+				<div id="share">
+                    
+				</div>
+			</div>
+		</div> 
+		<div class="clearfix"></div>
+
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
+
+				<div id="comments">
+                    
+				</div>
+			</div>
+		</div> 
+		<div class="clearfix"></div>
+
+	</div>	
+
+</main>
+<div id="disqus_thread"></div>
+<script>
+
+
+
+
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://https-jdstallings-github-io.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<footer id="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Contact</h3>
+				<div class="widget-body">
+					<p>&#43;1 253-861-0509<br>
+						<a href="mailto:jdstallings@DataInDeed.io">jdstallings@DataInDeed.io</a><br>
+						<br>
+						Frederick, MD 21702
+					</p>
+				</div>
+			</div>
+
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Follow me</h3>
+				<div class="widget-body">
+					<p class="follow-me-icons">
+                        
+                            
+                                <a href="https://www.facebook.com/DataIndeed" target="_blank"><i class="fa fa-facebook-square fa-2"></i></a>
+                            
+                        
+                            
+                                <a href="https://twitter.com/dataindeed" target="_blank"><i class="fa fa-twitter-square fa-2"></i></a>
+                            
+                        
+                            
+                                <a href="https://www.instagram.com/dataindeed" target="_blank"><i class="fa fa-instagram fa-2"></i></a>
+                            
+                        
+                            
+                        
+                            
+                                <a href="https://www.linkedin.com/in/jonathandstallings" target="_blank"><i class="fa fa-linkedin-square fa-2"></i></a>
+                            
+                        
+                            
+                                <a href="https://github.com/jdstallings" target="_blank"><i class="fa fa-github fa-2"></i></a>
+                            
+                        
+                            
+                                <a href="mailto:jdstallings@dataindeed.io" target="_blank"><i class="fa fa-envelope fa-2"></i></a>
+                            
+                        
+					</p>
+				</div>
+			</div>
+
+      <div class="col-md-3 widget">
+        <h3 class="widget-title">SERVICES</h3>
+				<div class="widget-body">
+				</div>
+										<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="QFTCM5WQPHDD8">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+			</div>
+			<div class="col-md-3 widget">
+				<div class="widget-body">
+					<p class="text-right">
+						Copyright &copy; 2017 <br> Jonathan D. Stallings<br>
+						Design: <a href="http://www.gettemplate.com" rel="designer">Initio by GetTemplate</a>
+            Powered by: <a href="https://gohugo.io/" rel="poweredby">Hugo</a></p>
+				</div>
+			</div>
+		</div> 
+	</div>
+</footer>
+
+<footer id="underfooter">
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-6 widget">
+				<div class="widget-body">
+					<p></p>
+				</div>
+			</div>
+
+		</div> 
+	</div>
+</footer>
+
+			<div class="col-md-3 widget">
+			</div>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="/js/template.js"></script>
+<script id="dsq-count-scr" src="//https://https-jdstallings-github-io.disqus.com/count.js" async></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-114986818-1', 'auto');
+  ga('send', 'pageview');
+  
+</script>
+
+</body>
+</html>
+
+<script src="//yihui.name/js/math-code.js"></script>
+<script async
+src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+

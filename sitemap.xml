@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>/2018/03/03/dailyr-ggplot2-scatterplot/</loc>
+    <lastmod>2018-03-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/2017/12/03/likert-scale-analysis/</loc>
+    <lastmod>2017-12-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/2017/11/19/rcds-ad/</loc>
+    <lastmod>2017-11-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/service/research-consulting/</loc>
+    <lastmod>2017-10-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/about/</loc>
+    <lastmod>2017-10-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/service/data-science/</loc>
+    <lastmod>2017-10-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/cv/curriculum-vitae/</loc>
+    <lastmod>2017-10-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/service/r-workflows/</loc>
+    <lastmod>2017-10-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/service/applications/</loc>
+    <lastmod>2017-10-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/opps-coming-soon/</loc>
+    <lastmod>2017-10-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/2017/05/12/switching-to-blogdown-hugo/</loc>
+    <lastmod>2017-05-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/2017/04/30/aroma-project/</loc>
+    <lastmod>2017-04-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/2017/04/03/example-faers-project-setup/</loc>
+    <lastmod>2017-04-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/2017/03/11/probability-distribution/</loc>
+    <lastmod>2017-03-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/2017/01/14/linear-regression/</loc>
+    <lastmod>2017-01-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/2016/12/22/my-library/</loc>
+    <lastmod>2016-12-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/2016/12/17/the-data-table-package/</loc>
+    <lastmod>2016-12-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/2016/12/10/my-adventures-in-data-science/</loc>
+    <lastmod>2016-12-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/#dailyr/</loc>
+    <lastmod>2018-03-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/#dataindeed/</loc>
+    <lastmod>2018-03-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/#dataindeed/</loc>
+    <lastmod>2018-03-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/#datascience/</loc>
+    <lastmod>2018-03-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/#datascience/</loc>
+    <lastmod>2018-03-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/#datasolutions/</loc>
+    <lastmod>2018-03-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/#datasolutions/</loc>
+    <lastmod>2018-03-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/#datastories/</loc>
+    <lastmod>2018-03-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/#datastories/</loc>
+    <lastmod>2018-03-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/#geom_point/</loc>
+    <lastmod>2018-03-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/#geom_point/</loc>
+    <lastmod>2018-03-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/#ggplot2/</loc>
+    <lastmod>2018-03-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/#ggplot2/</loc>
+    <lastmod>2018-03-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/#options/</loc>
+    <lastmod>2018-03-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/#options/</loc>
+    <lastmod>2018-03-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/#scatterplot/</loc>
+    <lastmod>2018-03-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/#scatterplot/</loc>
+    <lastmod>2018-03-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/#theme_set/</loc>
+    <lastmod>2018-03-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/#theme_set/</loc>
+    <lastmod>2018-03-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/ad/</loc>
+    <lastmod>2017-11-19T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/ad/</loc>
+    <lastmod>2017-11-19T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/aic/</loc>
+    <lastmod>2017-01-14T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/aromatherapy/</loc>
+    <lastmod>2017-04-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/bic/</loc>
+    <lastmod>2017-01-14T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/blog/</loc>
+    <lastmod>2017-05-12T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/blog/</loc>
+    <lastmod>2017-05-12T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/blogdown/</loc>
+    <lastmod>2017-05-12T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+    <lastmod>2018-03-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/consulting/</loc>
+    <lastmod>2017-10-31T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/cv/</loc>
+    <lastmod>2017-10-29T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/cv-data-science-systems-biology-systems-toxicology-transcriptomics-proteomics-metabolomics-heat-stroke-hyperthermia-environmental-hazards-biomarkers/</loc>
+    <lastmod>2017-10-29T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/cv/</loc>
+    <lastmod>2017-10-29T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/data/</loc>
+    <lastmod>2016-12-17T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/data-frame/</loc>
+    <lastmod>2016-12-17T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/data-import/</loc>
+    <lastmod>2017-04-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2018-03-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/data-science/</loc>
+    <lastmod>2017-10-31T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/data-science/</loc>
+    <lastmod>2016-12-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/data-table/</loc>
+    <lastmod>2016-12-17T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/data-table/</loc>
+    <lastmod>2016-12-17T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/homoscedasticity/</loc>
+    <lastmod>2017-01-14T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/hugo/</loc>
+    <lastmod>2017-05-12T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/import/</loc>
+    <lastmod>2016-12-17T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/interval/</loc>
+    <lastmod>2017-12-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/interval/</loc>
+    <lastmod>2017-12-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/introduction/</loc>
+    <lastmod>2016-12-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/library/</loc>
+    <lastmod>2016-12-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/library/</loc>
+    <lastmod>2016-12-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/likert/</loc>
+    <lastmod>2017-12-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/likert/</loc>
+    <lastmod>2017-12-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/linear-regression/</loc>
+    <lastmod>2017-01-14T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/machine-learning/</loc>
+    <lastmod>2017-04-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/multicollinearity/</loc>
+    <lastmod>2017-01-14T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/ordinal/</loc>
+    <lastmod>2017-12-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/ordinal/</loc>
+    <lastmod>2017-12-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/ponv/</loc>
+    <lastmod>2017-04-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/post/</loc>
+    <lastmod>2018-03-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/probability/</loc>
+    <lastmod>2017-03-11T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/probability-distributions/</loc>
+    <lastmod>2017-03-11T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/project-setup/</loc>
+    <lastmod>2017-04-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/research/</loc>
+    <lastmod>2017-10-31T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/residuals/</loc>
+    <lastmod>2017-01-14T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/resources/</loc>
+    <lastmod>2016-12-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/rmarkdown/</loc>
+    <lastmod>2017-04-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/scales/</loc>
+    <lastmod>2017-12-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/scales/</loc>
+    <lastmod>2017-12-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/service/</loc>
+    <lastmod>2017-10-31T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/services/</loc>
+    <lastmod>2017-10-31T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/statistical-models/</loc>
+    <lastmod>2017-01-14T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2018-03-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/variable-importance/</loc>
+    <lastmod>2017-04-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>
